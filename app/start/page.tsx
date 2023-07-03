@@ -1,4 +1,4 @@
-export default function Start() {
+export default function Page() {
     return (
         <div>
             <p>Starting my first Next.js page</p>
