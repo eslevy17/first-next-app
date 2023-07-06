@@ -5,6 +5,10 @@ const navBarCSS: string = `
     justify-center
 `;
 
+const navItemsCSS: string = `
+    ml-2
+`;
+
 const navItemCSS: string = `
     hover:brightness-125
     first:rounded-t-2xl
@@ -14,15 +18,16 @@ const navItemCSS: string = `
 const navItemHrefCSS: string = `
     text-gray-500
     inline-block
-    p-4
+    py-1
 `;
 
+type navItem = {
+    text: string
+    link: string
+    subItems?: navItem[]
+}
+
 export function NavBar() {
-    type navItem = {
-        text: string
-        link: string
-        subItems?: navItem[]
-    }
 
     const navItems: navItem[] = [
         {
@@ -31,7 +36,17 @@ export function NavBar() {
         },
         {
             text: 'First',
-            link: '/first'
+            link: '/first',
+            subItems: [
+                {
+                    text: 'First subpage 1',
+                    link: '/first/subpage1'
+                },
+                {
+                    text: 'First subpage 2',
+                    link: '/first/subpage2'
+                },
+            ]
         },
         {
             text: 'Second',
@@ -45,13 +60,24 @@ export function NavBar() {
 
     return (
         <div className={navBarCSS}>
+            {RenderNavItems(navItems)}
+        </div>
+    )
+}
+
+function RenderNavItems(navItems?: navItem[]) {
+    if (!navItems?.length) return null
+
+    return (
+        <ul className={navItemsCSS}>
             {navItems.map((navItem, idx) => (
-                <div key={idx + navItem.text} className={navItemCSS}>
+                <li key={idx + navItem.text} className={navItemCSS}>
                     <Link href={navItem.link} className={navItemHrefCSS}>
                         {navItem.text}
                     </Link>
-                </div>
+                    {RenderNavItems(navItem.subItems)}
+                </li>
             ))}
-        </div>
+        </ul>
     )
 }
