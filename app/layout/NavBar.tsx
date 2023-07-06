@@ -50,7 +50,13 @@ export function NavBar() {
         },
         {
             text: 'Second',
-            link: '/second'
+            link: '/second',
+            subItems: [1,2,3].map(num => (
+                {
+                    text: `Dynamic subpage ${num}`,
+                    link: `/second/${num}`
+                }
+            ))
         },
         {
             text: 'Third',
