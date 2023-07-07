@@ -60,7 +60,17 @@ export function NavBar() {
         },
         {
             text: 'Third',
-            link: '/third'
+            link: '/third',
+            subItems: [
+                {title: 'Single', params: ['param1']},
+                {title: 'Double', params: ['param1', 'param2']},
+                {title: 'Triple', params: ['param1', 'param2', 'param3']},
+            ].map(obj => (
+                {
+                    text: `Dynamic catch-all (${obj.title})`,
+                    link: `/third/${obj.params.join('/')}`
+                }
+            ))
         }
     ]
 
