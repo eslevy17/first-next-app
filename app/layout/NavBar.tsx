@@ -2,6 +2,7 @@ import Link from "next/link";
 
 const navBarCSS: string = `
     flex-col
+    col-span-2
     justify-center
 `;
 

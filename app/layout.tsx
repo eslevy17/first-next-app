@@ -17,9 +17,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className={'grid grid-cols-8'}>
+        <div className={'grid grid-cols-12'}>
             <NavBar />
-            <div className={'col-span-7'}>
+            <div className={'col-span-10'}>
                 {children}
             </div>
         </div>
