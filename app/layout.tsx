@@ -1,6 +1,7 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
 import {NavBar} from "@/app/layout/NavBar";
+import {TopBar} from "@/app/layout/TopBar";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,6 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <div className={'grid grid-cols-12'}>
+            <TopBar />
             <NavBar />
             <div className={'col-span-10'}>
                 {children}
