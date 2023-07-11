@@ -19,7 +19,7 @@ const navItemCSS: string = `
 `;
 
 const navItemHrefCSS: string = `
-    hover:brightness-125
+    hover:text-gray-300
     text-gray-500
     inline-block
     py-1
@@ -87,7 +87,11 @@ export function NavBar() {
     )
 }
 
-function RenderNavItems(navItems?: navItem[], pathname?: string) {
+function RenderNavItems(
+    navItems?: navItem[],
+    pathname?: string,
+    level: number=1,
+) {
     if (!navItems?.length) return null
 
     return (
@@ -98,11 +102,24 @@ function RenderNavItems(navItems?: navItem[], pathname?: string) {
 
                 let extraCSS = ''
 
+                // text highlight
                 if (isParentSelected) {
-                    extraCSS += ' text-gray-400'
+                    extraCSS += ' !text-gray-400'
                 }
                 if (isSelected) {
-                    extraCSS += ' text-gray-100'
+                    extraCSS += ' !text-gray-300'
+                }
+
+                // border-l highlight
+                if (level > 1) {
+                    extraCSS += ' pl-2 border-l'
+
+                    if (isSelected) {
+                        extraCSS += ' border-gray-300'
+                    }
+                    else {
+                        extraCSS += ' border-gray-700'
+                    }
                 }
 
                 return (
@@ -113,7 +130,7 @@ function RenderNavItems(navItems?: navItem[], pathname?: string) {
                         >
                             {navItem.text}
                         </Link>
-                        {RenderNavItems(navItem.subItems, pathname)}
+                        {RenderNavItems(navItem.subItems, pathname, level + 1)}
                     </li>
                 )
             })}
