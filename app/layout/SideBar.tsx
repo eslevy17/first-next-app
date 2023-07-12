@@ -75,6 +75,11 @@ export function SideBar() {
                     link: `/catch-all/${obj.params.join('/')}`
                 }
             ))
+        },
+        {
+            text: 'Data Fetching',
+            link: '/data',
+            subItems: []
         }
     ]
 
