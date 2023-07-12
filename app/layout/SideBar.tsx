@@ -31,7 +31,7 @@ type navItem = {
     subItems?: navItem[]
 }
 
-export function NavBar() {
+export function SideBar() {
 
     const navItems: navItem[] = [
         {
