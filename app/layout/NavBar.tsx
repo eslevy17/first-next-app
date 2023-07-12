@@ -39,32 +39,32 @@ export function NavBar() {
             link: '/start'
         },
         {
-            text: 'First',
-            link: '/first',
+            text: 'Static Pages',
+            link: '/static',
             subItems: [
                 {
-                    text: 'First subpage 1',
-                    link: '/first/subpage1'
+                    text: 'Static subpage 1',
+                    link: '/static/subpage1'
                 },
                 {
-                    text: 'First subpage 2',
-                    link: '/first/subpage2'
+                    text: 'Static subpage 2',
+                    link: '/static/subpage2'
                 },
             ]
         },
         {
-            text: 'Second',
-            link: '/second',
+            text: 'Dynamic Pages',
+            link: '/dynamic',
             subItems: [1,2,3].map(num => (
                 {
                     text: `Dynamic subpage ${num}`,
-                    link: `/second/${num}`
+                    link: `/dynamic/${num}`
                 }
             ))
         },
         {
-            text: 'Third',
-            link: '/third',
+            text: 'Catch-all Params Pages',
+            link: '/catch-all',
             subItems: [
                 {title: 'Single', params: ['param1']},
                 {title: 'Double', params: ['param1', 'param2']},
@@ -72,7 +72,7 @@ export function NavBar() {
             ].map(obj => (
                 {
                     text: `Dynamic catch-all (${obj.title})`,
-                    link: `/third/${obj.params.join('/')}`
+                    link: `/catch-all/${obj.params.join('/')}`
                 }
             ))
         }

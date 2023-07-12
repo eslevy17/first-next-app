@@ -1,7 +1,7 @@
 export default function Page() {
     return (
         <div>
-            <p>First page</p>
+            <p>Catch-all pages</p>
         </div>
     )
 }

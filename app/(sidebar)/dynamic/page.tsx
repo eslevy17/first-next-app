@@ -1,7 +1,7 @@
 export default function Page() {
     return (
         <div>
-            <p>Second page</p>
+            <p>Dynamic pages</p>
         </div>
     )
 }
