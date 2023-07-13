@@ -84,6 +84,10 @@ export function SideBar() {
                     text: 'Simple data fetching',
                     link: '/data/simple'
                 },
+                {
+                    text: 'Complex data fetching',
+                    link: '/data/complex'
+                },
             ]
         }
     ]
