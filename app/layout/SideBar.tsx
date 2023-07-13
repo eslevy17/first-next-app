@@ -79,7 +79,12 @@ export function SideBar() {
         {
             text: 'Data Fetching',
             link: '/data',
-            subItems: []
+            subItems: [
+                {
+                    text: 'Simple data fetching',
+                    link: '/data/simple'
+                },
+            ]
         }
     ]
 

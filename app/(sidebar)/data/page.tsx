@@ -1,13 +1,7 @@
-async function getData() {
-    return (await fetch('http://localhost:3000/api/hello')).text()
-}
-
-export default async function Page() {
-    const data = await getData();
-
+export default function Page() {
     return (
         <div>
-            <p>{data}</p>
+            <p>Data-fetching pages</p>
         </div>
     )
 }
