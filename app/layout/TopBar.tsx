@@ -4,6 +4,10 @@ const topBarCSS: string = `
     border-b
     flex
     justify-center
+    sticky
+    top-0
+    z-10
+    bg-slate-900
 `;
 
 export function TopBar() {
