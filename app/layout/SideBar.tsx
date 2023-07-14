@@ -81,12 +81,12 @@ export function SideBar() {
             link: '/data',
             subItems: [
                 {
-                    text: 'Simple data fetching',
-                    link: '/data/simple'
+                    text: 'Simple string fetching',
+                    link: '/data/string'
                 },
                 {
-                    text: 'Complex data fetching',
-                    link: '/data/complex'
+                    text: 'JSON data fetching',
+                    link: '/data/json'
                 },
             ]
         }

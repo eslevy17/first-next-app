@@ -1,5 +1,5 @@
 async function getData() {
-    return (await fetch('http://localhost:3000/api/simple')).text()
+    return (await fetch('http://localhost:3000/api/string')).text()
 }
 
 export default async function Page() {

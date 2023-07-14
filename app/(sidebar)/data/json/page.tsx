@@ -1,5 +1,5 @@
 async function getData() {
-    return (await fetch('http://localhost:3000/api/complex')).json()
+    return (await fetch('http://localhost:3000/api/json')).json()
 }
 
 export default async function Page() {
