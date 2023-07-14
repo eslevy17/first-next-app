@@ -88,6 +88,10 @@ export function SideBar() {
                     text: 'JSON data fetching',
                     link: '/data/json'
                 },
+                {
+                    text: 'Parameterized fetching',
+                    link: '/data/12'
+                },
             ]
         }
     ]
