@@ -35,8 +35,8 @@ export function SideBar() {
 
     const navItems: navItem[] = [
         {
-            text: 'Start',
-            link: '/start'
+            text: 'Home',
+            link: '/'
         },
         {
             text: 'Static Pages',
