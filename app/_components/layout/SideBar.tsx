@@ -97,6 +97,11 @@ export function SideBar() {
                     link: '/data/12/13/14/15'
                 },
             ]
+        },
+        {
+            text: 'Parallel Routes',
+            link: '/parallels',
+            subItems: []
         }
     ]
 
