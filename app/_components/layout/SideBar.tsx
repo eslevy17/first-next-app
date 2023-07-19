@@ -101,7 +101,12 @@ export function SideBar() {
         {
             text: 'Parallel Routes',
             link: '/parallels',
-            subItems: []
+            subItems: [
+                {
+                    text: 'Instant loading',
+                    link: '/parallels/instant'
+                },
+            ]
         }
     ]
 
