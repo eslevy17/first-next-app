@@ -106,6 +106,10 @@ export function SideBar() {
                     text: 'Instant loading',
                     link: '/parallels/instant'
                 },
+                {
+                    text: 'Suspenseful loading',
+                    link: '/parallels/suspense'
+                },
             ]
         }
     ]
