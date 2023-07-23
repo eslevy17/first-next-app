@@ -7,6 +7,7 @@ const navBarCSS: string = `
     flex-col
     col-span-2
     justify-center
+    pl-2
 `;
 
 const navItemsCSS: string = `
@@ -19,7 +20,7 @@ const navItemCSS: string = `
 `;
 
 const navItemHrefCSS: string = `
-    hover:text-gray-300
+    hover:!text-sky-500
     text-gray-500
     inline-block
     py-1
@@ -134,27 +135,27 @@ function RenderNavItems(
         <ul className={navItemsCSS}>
             {navItems.map((navItem, idx) => {
                 const isSelected = navItem.link === pathname
-                const isParentSelected = !isSelected && navItem.link.replace('/', '') === pathname?.split('/')[1]
+
+                // might be used later
+                // const isParentSelected = !isSelected && navItem.link.replace('/', '') === pathname?.split('/')[1]
 
                 let extraCSS = ''
 
                 // text highlight
-                if (isParentSelected) {
-                    extraCSS += ' !text-gray-400'
-                }
                 if (isSelected) {
-                    extraCSS += ' !text-gray-300'
+                    extraCSS += ' !text-sky-500'
+                }
+
+                if (level === 1) {
+                    extraCSS += ' font-extrabold !text-gray-400'
                 }
 
                 // border-l highlight
                 if (level > 1) {
-                    extraCSS += ' pl-2 border-l'
+                    extraCSS += ' pl-2 border-l border-gray-800'
 
                     if (isSelected) {
-                        extraCSS += ' border-gray-300'
-                    }
-                    else {
-                        extraCSS += ' border-gray-700'
+                        extraCSS += ' border-sky-500'
                     }
                 }
 
