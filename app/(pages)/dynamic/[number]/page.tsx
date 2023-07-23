@@ -7,7 +7,9 @@ type dynamicPageNumberProps = {
 export default function Page({ params }: dynamicPageNumberProps) {
     return (
         <div>
-            Dynamic page #{params.number}
+            <p>Dynamic page #{params.number}</p>
+            <br />
+            <p className={'text-gray-600'}>Change the URL to see the result</p>
         </div>
     )
 }
