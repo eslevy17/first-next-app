@@ -36,36 +36,36 @@ export function SideBar() {
 
     const navItems: navItem[] = [
         {
-            text: 'Home',
-            link: '/'
+            text: 'Docs Home',
+            link: '/docs'
         },
         {
             text: 'Static Pages',
-            link: '/static',
+            link: '/docs/static',
             subItems: [
                 {
                     text: 'Static subpage 1',
-                    link: '/static/subpage1'
+                    link: '/docs/static/subpage1'
                 },
                 {
                     text: 'Static subpage 2',
-                    link: '/static/subpage2'
+                    link: '/docs/static/subpage2'
                 },
             ]
         },
         {
             text: 'Dynamic Pages',
-            link: '/dynamic',
+            link: '/docs/dynamic',
             subItems: [1,2,3].map(num => (
                 {
                     text: `Dynamic subpage ${num}`,
-                    link: `/dynamic/${num}`
+                    link: `/docs/dynamic/${num}`
                 }
             ))
         },
         {
             text: 'Catch-all Params Pages',
-            link: '/catch-all',
+            link: '/docs/catch-all',
             subItems: [
                 {title: 'Single', params: ['param1']},
                 {title: 'Double', params: ['param1', 'param2']},
@@ -73,43 +73,43 @@ export function SideBar() {
             ].map(obj => (
                 {
                     text: `Dynamic catch-all (${obj.title})`,
-                    link: `/catch-all/${obj.params.join('/')}`
+                    link: `/docs/catch-all/${obj.params.join('/')}`
                 }
             ))
         },
         {
             text: 'Data Fetching',
-            link: '/data',
+            link: '/docs/data',
             subItems: [
                 {
                     text: 'Simple string fetching',
-                    link: '/data/string'
+                    link: '/docs/data/string'
                 },
                 {
                     text: 'JSON data fetching',
-                    link: '/data/json'
+                    link: '/docs/data/json'
                 },
                 {
                     text: 'Fetch with param',
-                    link: '/data/12'
+                    link: '/docs/data/12'
                 },
                 {
                     text: 'Fetch with params',
-                    link: '/data/12/13/14/15'
+                    link: '/docs/data/12/13/14/15'
                 },
             ]
         },
         {
             text: 'Parallel Routes',
-            link: '/parallels',
+            link: '/docs/parallels',
             subItems: [
                 {
                     text: 'Instant loading',
-                    link: '/parallels/instant'
+                    link: '/docs/parallels/instant'
                 },
                 {
                     text: 'Suspenseful loading',
-                    link: '/parallels/suspense'
+                    link: '/docs/parallels/suspense'
                 },
             ]
         }
