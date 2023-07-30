@@ -1,4 +1,6 @@
+'use client'
 import Link from "next/link";
+import {usePathname} from "next/navigation";
 
 const topBarCSS: string = `
     col-span-12
@@ -40,21 +42,38 @@ const topBarMenuItems: {
         text: 'Docs',
         href: '/docs'
     },
+    {
+        text: 'Tests',
+        href: '/tests'
+    },
 ]
 
 export function TopBar() {
+    const pathname = usePathname()
+
     return (
         <div className={topBarCSS}>
             <h1 className={topBarTitleCSS}>First Next Project</h1>
             <div className={topBarMenuItemsCSS}>
-                {topBarMenuItems.map(item => (
-                    <Link
-                        key={item.text}
-                        href={item.href}
-                    >
-                        {item.text}
-                    </Link>
-                ))}
+                {topBarMenuItems.map(item => {
+                    let navItemCSS = 'text-gray-400 font-extrabold'
+
+                    const isSelected = item.href === '/' + pathname.split('/')[1]
+
+                    if (isSelected) {
+                        navItemCSS += ' !text-sky-500'
+                    }
+
+                    return (
+                        <Link
+                            key={item.text}
+                            href={item.href}
+                            className={navItemCSS}
+                        >
+                            {item.text}
+                        </Link>
+                    )
+                })}
             </div>
         </div>
     )
