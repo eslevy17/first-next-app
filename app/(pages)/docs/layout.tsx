@@ -1,4 +1,5 @@
-import {SideBar} from "@/app/(pages)/docs/SideBar";
+import {SideBar} from "@/app/_components/layout/SideBar";
+import {navItems} from './navItems'
 
 export default function Layout({
     children,
@@ -7,7 +8,7 @@ export default function Layout({
 }) {
     return (
         <div className={'grid grid-cols-12'}>
-            <SideBar/>
+            <SideBar navItems={navItems}/>
             <div className={'col-span-10'}>
                 {children}
             </div>
