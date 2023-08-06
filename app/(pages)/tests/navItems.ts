@@ -15,4 +15,14 @@ export const navItems: navItem[] = [
             },
         ]
     },
+    {
+        text: 'Interactions',
+        link: '/tests/interactions',
+        subItems: [
+            {
+                text: 'Buttons',
+                link: '/tests/interactions/buttons'
+            },
+        ]
+    },
 ]
