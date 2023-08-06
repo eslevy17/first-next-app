@@ -23,6 +23,10 @@ export const navItems: navItem[] = [
                 text: 'Buttons',
                 link: '/tests/interactions/buttons'
             },
+            {
+                text: 'Slider',
+                link: '/tests/interactions/slider'
+            },
         ]
     },
 ]
