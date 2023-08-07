@@ -28,6 +28,7 @@ export default function Page() {
 
             <div className={buttonColumn}>
                 <button
+                    title={'plus'}
                     onClick={() => setCount(count => count + 1)}
                     className={buttonCSS}
                 >
@@ -37,6 +38,7 @@ export default function Page() {
                 <p title={'count'}>{count}</p>
 
                 <button
+                    title={'minus'}
                     onClick={() => setCount(count => count - 1)}
                     className={buttonCSS}
                 >

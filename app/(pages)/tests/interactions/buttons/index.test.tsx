@@ -14,7 +14,7 @@ describe('Page', () => {
     it('Increments the counter to 5', () => {
         render(<Page />)
 
-        const plusButton = screen.getByRole('button', {name: '+'})
+        const plusButton = screen.getByTitle('plus')
         const counter = screen.getByTitle('count')
 
         for (let i = 0; i < 5; i++) {
@@ -27,8 +27,8 @@ describe('Page', () => {
     it('Increments the counter to 5 then subtracts 2', () => {
         render(<Page />)
 
-        const plusButton = screen.getByRole('button', {name: '+'})
-        const minusButton = screen.getByRole('button', {name: '-'})
+        const plusButton = screen.getByTitle('plus')
+        const minusButton = screen.getByTitle('minus')
         const counter = screen.getByTitle('count')
 
         for (let i = 0; i < 5; i++) {
@@ -47,7 +47,7 @@ describe('Page', () => {
     it('Decrements to -2', () => {
         render(<Page />)
 
-        const minusButton = screen.getByRole('button', {name: '-'})
+        const minusButton = screen.getByTitle('minus')
         const counter = screen.getByTitle('count')
 
         for (let i = 0; i < 2; i++) {
